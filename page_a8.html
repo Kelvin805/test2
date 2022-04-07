@@ -61,7 +61,7 @@
       window.onload = function () {
       
       var chart = new CanvasJS.Chart("chartContainer", {
-        animationEnabled: true,
+        animationEnabled: false,
         theme: "dark2",
         title:{
           text: "積分"
@@ -70,7 +70,7 @@
       
         data: [{
           type: "line",
-          showInLegend: true,
+          showInLegend: false,
           name: "總積分",
           markerType: "square",
           xValueFormatString: "YYYY",
@@ -94,7 +94,7 @@
         },
         {
           type: "line",
-          showInLegend: true,
+          showInLegend: false,
           name: "勝出",
           lineDashType: "dash",
           xValueFormatString: "YYYY",
@@ -787,7 +787,7 @@
       </div>
 
       <!-- Unnamed (Image) -->
-      <div id="chartContainer" class="ax_default"></div>
+      <div id="chartContainer"></div>
 
 
 
