@@ -48,84 +48,51 @@
     <script>
       window.onload = function () {
       
-      var chart = new CanvasJS.Chart("chartContainer", {
-        animationEnabled: true,
-        theme: "dark2",
-        title:{
-          text: "年度總得分"
-        },
-        axisX:{
-          valueFormatString: "YYYY",
-          crosshair: {
-            enabled: false,
-            snapToDataPoint: false
-          }
-        },
-        axisY: {
-          title: "",
-          crosshair: {
-            enabled: false
-          }
-        },
-        toolTip:{
-          shared:false
-        },  
-        legend:{
-          cursor:"pointer",
-          verticalAlign: "bottom",
-          horizontalAlign: "left",
-          dockInsidePlotArea: true,
-          itemclick: toogleDataSeries
-        },
-        data: [{
-          type: "line",
-          showInLegend: true,
-          name: "得分",
-          markerType: "square",
-          xValueFormatString: "YYYY",
-          color: "#F08080",
-          dataPoints: [
-            
-            { x: new Date(2015, 0, 0), y: 23 },
-            { x: new Date(2016, 0, 0), y: 39 },
-            { x: new Date(2017, 0, 0), y: 33 },
-            { x: new Date(2018, 0, 0), y: 28 },
-            { x: new Date(2019, 0, 0), y: 35 },
-            { x: new Date(2020, 0, 0), y: 40 },
-            { x: new Date(2021, 0, 0), y: 47 }
-          ]
-        },
-        {
-          type: "line",
-          showInLegend: true,
-          name: "入球",
-          lineDashType: "dash",
-          xValueFormatString: "YYYY",
-          dataPoints: [
-
-            { x: new Date(2015, 0, 0), y: 13 },
-            { x: new Date(2016, 0, 0), y: 20 },
-            { x: new Date(2017, 0, 0), y: 17 },
-            { x: new Date(2018, 0, 0), y: 15 },
-            { x: new Date(2019, 0, 0), y: 19 },
-            { x: new Date(2020, 0, 0), y: 22 },
-            { x: new Date(2021, 0, 0), y: 25 }
-          ]
-        }]
+        var chart = new CanvasJS.Chart("chartContainer", {
+      	animationEnabled: true,
+      	theme: "dark2",
+      	title:{
+    		text: "年度總積分"
+    	},
+      	toolTip:{
+    		enabled: false,
+    		shared:false
+    	},  
+      	data: [{
+    		type: "line",
+    		showInLegend: true,
+    		name: "得分",
+	    	markerType: "square",
+	    	color: "#F08080",
+	    	dataPoints: [
+					{ x: 10, y: 23, label:"2015" },
+					{ x: 20, y: 39, label:"2016" },
+					{ x: 30, y: 34, label:"2017" },
+					{ x: 40, y: 28, label:"2018" },
+					{ x: 50, y: 35, label:"2019" },
+					{ x: 60, y: 40, label:"2020" },
+					{ x: 70, y: 48, label:"2021" },
+	    	]
+	    },
+	    {
+		    type: "line",
+	    	showInLegend: true,
+		    name: "入球",
+		    lineDashType: "dash",
+		    dataPoints: [
+					{ x: 10, y: 13},
+					{ x: 20, y: 20},
+					{ x: 30, y: 18},
+					{ x: 40, y: 15},
+					{ x: 50, y: 19},
+					{ x: 60, y: 22},
+					{ x: 70, y: 25},
+		    ]
+	    }]
       });
-      chart.render();
-      
-      function toogleDataSeries(e){
-        if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-          e.dataSeries.visible = false;
-        } else{
-          e.dataSeries.visible = true;
-        }
         chart.render();
       }
-      
-      }
-      </script>
+    </script>
   </head>
   <body>
     <div id="base" class="">
