@@ -8,6 +8,7 @@
     <link href="data/styles.css" type="text/css" rel="stylesheet"/>
     <link href="files/page_a8/styles.css" type="text/css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Source+Code+Pro" type="text/css" rel="stylesheet"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
     <script src="resources/scripts/jquery-3.2.1.min.js"></script>
     <script src="resources/scripts/axure/axQuery.js"></script>
     <script src="resources/scripts/axure/globals.js"></script>
@@ -40,6 +41,14 @@
     <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
     <script src="data/document.js"></script>
     <script src="files/page_a8/data.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/locales/de_DE.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/germanyLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/fonts/notosans-sc.js"></script>
     <script type="text/javascript">
       $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
       $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
@@ -670,10 +679,13 @@
           <p><span>AI模組嚴選最高分球隊 – 羅斯托夫 PFC索契</span></p>
         </div>
       </div>
-      <div id="gauge" class="ax_default">
+      <div id="gauge1" class="gauge1"></div>
+      <div id="gauge2" class="gauge2">
         <canvas data-type="radial-gauge"
-          data-width="200"
-          data-height="200"
+        var g_width=250
+        var g_height=250
+          data-width="g_width"
+          data-height="g_height"
           data-units="積分"
           data-title="false"
           data-value="38"
@@ -953,8 +965,9 @@
       </div>
     </div>
     <script src="resources/scripts/axure/ios.js"></script>
-    <div id="chartContainer"></div>
+    <div id="chartContainer" class="chartContainer"></div>
     <script src="files/page_a8/canvasjs.min.js"></script>
+    <script src="files/page_a8/gauge.js"></script>
     <script src="files/page_a8/gauge.min.js"></script>
   </body>
 </html>
