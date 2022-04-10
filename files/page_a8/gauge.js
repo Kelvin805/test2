@@ -1,5 +1,5 @@
 // Create root and chart
-var root = am5.Root.new("gauge1"); 
+var root = am5.Root.new("gauge"); 
 
 root.setThemes([
   am5themes_Animated.new(root)
@@ -94,7 +94,7 @@ handDataItem.get("tick").set("visible", false);
 setInterval(() => {
   handDataItem.animate({
     key: "value",
-    to: 70,
+    to: 35,
     duration: 800,
     easing: am5.ease.out(am5.ease.cubic)
   });
